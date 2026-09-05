@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wait! One More Exclusive Offer For You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --vermelho:#DC2626;--vermelho-hover:#B91C1C;--vermelho-claro:#FEF2F2;--vermelho-medio:#FEE2E2;
+  --preto:#111827;--cinza-texto:#6B7280;--cinza-fundo:#F9FAFB;
+  --branco:#FFFFFF;--verde:#16A34A;--verde-claro:#DCFCE7;--borda:#E5E7EB;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--branco);color:var(--preto);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.15}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+.topo{background:var(--verde);padding:14px 20px;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,3vw,15px);color:var(--branco)}
+.badge{display:inline-block;background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:6px 20px;border-radius:999px;margin-bottom:20px;animation:entrar 0.6s ease-out}
+@keyframes entrar{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.hero{padding:48px 20px 0;text-align:center;background:var(--branco);border-bottom:1px solid var(--borda)}
+.hero-espera{font-family:'Montserrat',sans-serif;font-size:clamp(13px,2vw,15px);font-weight:600;color:var(--verde);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+.hero h1{font-size:clamp(24px,5vw,40px);font-weight:900;color:var(--preto);max-width:640px;margin:0 auto 12px}
+.hero h1 .destaque{color:var(--vermelho)}
+.hero-sub{font-size:clamp(14px,2vw,17px);color:var(--cinza-texto);max-width:560px;margin:0 auto 32px;line-height:1.7}
+.produto-box{background:var(--vermelho);padding:32px 24px 36px;text-align:center;max-width:560px;margin:0 auto 48px;border-radius:0 0 16px 16px;color:var(--branco)}
+.produto-box .de{font-size:15px;font-weight:600;text-decoration:line-through;color:rgba(255,255,255,0.5);margin-bottom:4px}
+.produto-box .por-label{font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;margin-bottom:4px}
+.produto-box .valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(56px,12vw,88px);color:var(--branco);line-height:1;margin-bottom:8px}
+.produto-box .valor sup{font-size:28px;vertical-align:super}
+.produto-box .economia{display:inline-block;background:var(--verde-claro);color:#166534;font-size:13px;font-weight:700;padding:5px 16px;border-radius:999px;margin-bottom:24px}
+.btn-sim{display:block;width:100%;background:var(--branco);color:var(--vermelho);font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(14px,3vw,17px);padding:20px 24px;border-radius:10px;border:none;cursor:pointer;text-align:center;transition:background 0.15s,transform 0.15s;animation:pulsar 2.5s infinite;line-height:1.3}
+.btn-sim:hover{background:var(--vermelho-claro);transform:scale(1.02)}
+@keyframes pulsar{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0.4)}50%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+.btn-nao{display:block;text-align:center;margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:underline;cursor:pointer}
+.btn-nao:hover{color:rgba(255,255,255,0.8)}
+.secao{padding:56px 20px;border-top:1px solid var(--borda)}
+.secao.bg-cinza{background:var(--cinza-fundo)}
+.secao.bg-vermelho-claro{background:var(--vermelho-claro)}
+.secao.bg-branco{background:var(--branco)}
+.secao-titulo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(20px,4vw,30px);text-align:center;margin-bottom:8px;color:var(--preto)}
+.secao-titulo .destaque{color:var(--vermelho)}
+.secao-sub{text-align:center;color:var(--cinza-texto);font-size:clamp(13px,2vw,15px);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
+.numeros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+@media(max-width:480px){.numeros-grid{grid-template-columns:1fr;gap:12px}}
+.numero-item{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:24px 16px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
+.numero-item:hover{border-color:var(--vermelho);box-shadow:0 2px 12px rgba(220,38,38,0.08)}
+.numero-valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(32px,6vw,48px);color:var(--vermelho);line-height:1;margin-bottom:8px}
+.numero-desc{font-size:13px;color:var(--cinza-texto);line-height:1.4}
+.segmentos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.segmento-item{background:var(--branco);border:1px solid var(--borda);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--preto);display:flex;align-items:center;gap:8px;transition:border-color 0.2s}
+.segmento-item:hover{border-color:var(--vermelho)}
+.seg-dot{flex-shrink:0;width:8px;height:8px;background:var(--vermelho);border-radius:50%}
+.itens-lista{list-style:none;display:flex;flex-direction:column;gap:12px}
+.item{display:flex;align-items:flex-start;gap:14px;background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;transition:border-color 0.2s,box-shadow 0.2s}
+.item:hover{border-color:var(--vermelho);box-shadow:0 2px 12px rgba(220,38,38,0.06)}
+.item-check{flex-shrink:0;width:24px;height:24px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.item-check svg{width:12px;height:12px}
+.item-titulo{font-weight:700;color:var(--vermelho);font-size:14px;margin-bottom:2px}
+.item-desc{font-size:13px;color:var(--cinza-texto);line-height:1.5}
+.valor-total-box{background:var(--vermelho-claro);border:2px solid var(--vermelho);border-radius:14px;padding:28px 24px;text-align:center;margin-top:32px}
+.valor-total-box p{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(14px,2vw,17px);color:var(--preto);margin-bottom:6px}
+.valor-total-box .preco-destaque{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(24px,4vw,36px);color:var(--vermelho)}
+.valor-total-box .preco-riscado{text-decoration:line-through;color:var(--cinza-texto);font-size:16px;font-weight:500}
+.entrega-box{display:flex;gap:20px;align-items:center;background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:14px;padding:28px 30px;max-width:560px;margin:0 auto}
+@media(max-width:480px){.entrega-box{flex-direction:column;text-align:center}}
+.entrega-icone{width:60px;height:60px;background:var(--vermelho);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.entrega-box h3{font-size:18px;font-weight:700;color:var(--vermelho);margin-bottom:6px}
+.entrega-box p{font-size:14px;color:var(--cinza-texto);line-height:1.6}
+.cta-final{background:var(--vermelho);padding:56px 20px;text-align:center}
+.cta-final h2{font-size:clamp(20px,4vw,30px);font-weight:900;color:var(--branco);max-width:560px;margin:0 auto 8px}
+.cta-final p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-final .preco-mini .de{font-size:14px;color:rgba(255,255,255,0.4);text-decoration:line-through;margin-bottom:2px}
+.cta-final .preco-mini .valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(44px,10vw,68px);color:var(--branco);line-height:1;margin-bottom:20px}
+.cta-final .preco-mini .valor sup{font-size:22px;vertical-align:super}
+.btn-sim-final{display:block;width:100%;max-width:520px;margin:0 auto;background:var(--branco);color:var(--vermelho);font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(14px,3vw,17px);padding:20px 24px;border-radius:10px;border:none;cursor:pointer;text-align:center;transition:background 0.15s,transform 0.15s;animation:pulsar 2.5s infinite;line-height:1.3}
+.btn-sim-final:hover{background:var(--vermelho-claro);transform:scale(1.02)}
+.btn-nao-final{display:block;text-align:center;margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:underline;cursor:pointer}
+.btn-nao-final:hover{color:rgba(255,255,255,0.8)}
+footer{border-top:1px solid var(--borda);padding:20px;text-align:center;color:var(--cinza-texto);font-size:12px;background:var(--cinza-fundo)}
+footer a{color:var(--vermelho);text-decoration:underline}
+.mt-32{margin-top:32px}
+@media(max-width:640px){.secao{padding:40px 16px}.hero{padding:36px 16px 0}.cta-final{padding:40px 16px}}
+</style>
+</head>
+<body>
+<div class="topo">✅ Order confirmed! But before you access your materials, check out this exclusive offer...</div>
+<section class="hero">
+  <div class="container">
+    <span class="badge">🔥 Exclusive Post-Purchase Offer</span>
+    <p class="hero-espera">⚠️ Only available right now — won't show up on any other page</p>
+    <h1>You've got the videos. Now imagine also having <span class="destaque">10,000 ready-to-post graphics</span> to post every single day</h1>
+    <p class="hero-sub">The 10K Post Library is the largest collection of ready-to-post graphics out there — with over 100 niches covered. Download it, post it, pull in customers.</p>
+  </div>
+  <div class="produto-box" style="margin-top:32px;border-radius:0;">
+    <p class="de">Was $97.00</p>
+    <p class="por-label">Just</p>
+    <div class="valor"><sup>$</sup>47.90</div>
+    <span class="economia">✓ You're saving $49.10 right now</span><br>
+    <a href="https://app.mivvo.io/checkout/ovyp9romnixypb2" class="btn-sim">✅ YES! I WANT THE 10K GRAPHICS LIBRARY FOR $47.90</a>
+    <a href="downsell.html" class="btn-nao">No thanks, I'll stick with just the videos</a>
+  </div>
+</section>
+<section class="secao bg-cinza">
+  <div class="container">
+    <h2 class="secao-titulo">The Size of the <span class="destaque">Collection</span></h2>
+    <p class="secao-sub">Numbers that impress — and that'll impress your customers too</p>
+    <div class="numeros-grid">
+      <div class="numero-item"><div class="numero-valor">10K</div><div class="numero-desc">Ready-to-post graphics</div></div>
+      <div class="numero-item"><div class="numero-valor">+100</div><div class="numero-desc">Niches covered</div></div>
+      <div class="numero-item"><div class="numero-valor">365</div><div class="numero-desc">Days of content, guaranteed</div></div>
+    </div>
+  </div>
+</section>
+<section class="secao bg-branco">
+  <div class="container">
+    <h2 class="secao-titulo">Over <span class="destaque">100 Niches</span> Included</h2>
+    <p class="secao-sub">A massive collection for any kind of business</p>
+    <div class="segmentos-grid">
+      <div class="segmento-item"><span class="seg-dot"></span>Auto Repair Shop</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Painter</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Car Wash</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Driving School</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Real Estate</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Solar Energy</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Hair Salon</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Nail Salon</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Barbershop</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Electrician</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Plumber</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Gym</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Pizza Shop</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Pet Shop</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Clinic</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Dentist</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Pharmacy</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Restaurant</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Bakery</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Burger Joint</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Glass Shop</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Photographer</div>
+      <div class="segmento-item"><span class="seg-dot"></span>Accounting</div>
+      <div class="segmento-item"><span class="seg-dot"></span>+80 more...</div>
+    </div>
+  </div>
+</section>
+<section class="secao bg-cinza">
+  <div class="container">
+    <h2 class="secao-titulo">What You <span class="destaque">Get</span></h2>
+    <p class="secao-sub">A complete collection so you never run out of content again</p>
+    <ul class="itens-lista">
+      <li class="item"><span class="item-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="item-titulo">🖼️ 10,000 Ready-to-Post Graphics</div><div class="item-desc">Posts, stories, and WhatsApp graphics. Every social format covered.</div></div></li>
+      <li class="item"><span class="item-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="item-titulo">📂 +100 Niches Organized by Folder</div><div class="item-desc">Every niche with hundreds of specific graphics ready to post.</div></div></li>
+      <li class="item"><span class="item-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="item-titulo">📅 365 Days of Content, Guaranteed</div><div class="item-desc">Post every single day for a full year without creating a thing from scratch.</div></div></li>
+      <li class="item"><span class="item-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="item-titulo">⚡ Instant Delivery by Email</div><div class="item-desc">As soon as your payment is confirmed, you get the access link straight to your email.</div></div></li>
+      <li class="item"><span class="item-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="item-titulo">🔄 The Perfect Complement to the Videos</div><div class="item-desc">The videos grab attention. The graphics keep the feed active. Together, your customers never forget your shop.</div></div></li>
+    </ul>
+    <div class="valor-total-box">
+      <p>For just <strong style="color:var(--vermelho);">$47.90 more</strong> you lock in 10,000 ready-to-post graphics.</p>
+      <p class="preco-riscado" style="margin-top:12px;">Was $97.00</p>
+      <p class="preco-destaque">Today for $47.90</p>
+    </div>
+  </div>
+</section>
+<section class="secao bg-branco">
+  <div class="container">
+    <h2 class="secao-titulo" style="margin-bottom:32px;">How Do You <span class="destaque">Get It</span>?</h2>
+    <div class="entrega-box">
+      <div class="entrega-icone">📧</div>
+      <div><h3>Instant Delivery by Email</h3><p>As soon as your payment is confirmed, we send the access link to the 10,000 graphics straight to your email. In under 5 minutes everything's ready to go.</p></div>
+    </div>
+  </div>
+</section>
+<div class="cta-final">
+  <div class="container">
+    <h2>Lock In Your 10K Graphics Library Now</h2>
+    <p>This offer only shows up here and now. Once you leave this page, the price goes back to normal.</p>
+    <div class="preco-mini"><p class="de">Was $97.00</p><div class="valor"><sup>$</sup>47.90</div></div>
+    <a href="https://app.mivvo.io/checkout/ovyp9romnixypb2" class="btn-sim-final">✅ YES! I WANT THE 10K GRAPHICS LIBRARY FOR $47.90</a>
+    <a href="downsell.html" class="btn-nao-final">No thanks, I'll stick with just the videos</a>
+  </div>
+</div>
+<footer>
+  <p style="margin-bottom:6px;"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Terms of Use</a></p>
+  <p>© 2026 — All rights reserved.</p>
+</footer>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','843796278012844');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=843796278012844&ev=PageView&noscript=1"/></noscript>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+</body>
+</html>

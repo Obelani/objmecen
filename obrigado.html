@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You! Your Order Is Confirmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --vermelho:#DC2626;--vermelho-claro:#FEF2F2;--vermelho-medio:#FEE2E2;
+  --preto:#111827;--cinza-texto:#6B7280;--cinza-fundo:#F9FAFB;
+  --branco:#FFFFFF;--verde:#16A34A;--verde-claro:#DCFCE7;--borda:#E5E7EB;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--branco);color:var(--preto);line-height:1.6;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
+h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:680px;margin:0 auto;padding:0 20px;flex:1}
+.topo-confirmado{background:var(--verde);padding:14px 20px;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,3vw,15px);color:var(--branco)}
+.hero{padding:60px 20px 56px;text-align:center}
+.icone-confirmado{width:100px;height:100px;background:var(--verde);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 28px;animation:entrar 0.8s ease-out,pulsar-verde 3s infinite 1s}
+@keyframes entrar{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes pulsar-verde{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0.4)}50%{box-shadow:0 0 0 16px rgba(22,163,74,0)}}
+.hero h1{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--preto);max-width:580px;margin:0 auto 12px}
+.hero h1 .destaque{color:var(--vermelho)}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--cinza-texto);max-width:520px;margin:0 auto 40px;line-height:1.7}
+.card-entrega{background:var(--branco);border:2px solid var(--verde);border-radius:16px;padding:32px 28px;margin-bottom:32px;text-align:center;box-shadow:0 4px 20px rgba(22,163,74,0.08)}
+.card-entrega .entrega-icone{font-size:40px;margin-bottom:16px;display:block}
+.card-entrega h3{font-size:20px;font-weight:900;color:var(--verde);margin-bottom:10px}
+.card-entrega p{font-size:15px;color:var(--cinza-texto);line-height:1.7;max-width:420px;margin:0 auto}
+.passos{display:flex;flex-direction:column;gap:14px;margin-bottom:40px;text-align:left}
+.passo{display:flex;align-items:flex-start;gap:16px;background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:18px 20px;transition:border-color 0.2s}
+.passo:hover{border-color:var(--vermelho)}
+.passo-numero{flex-shrink:0;width:36px;height:36px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:16px;color:var(--branco)}
+.passo-titulo{font-weight:700;color:var(--preto);font-size:15px;margin-bottom:4px}
+.passo-desc{font-size:13px;color:var(--cinza-texto);line-height:1.5}
+.aviso-spam{background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:16px 20px;text-align:center;margin-bottom:32px}
+.aviso-spam p{font-size:13px;color:var(--cinza-texto);line-height:1.6}
+.aviso-spam strong{color:var(--vermelho)}
+footer{border-top:1px solid var(--borda);padding:20px;text-align:center;color:var(--cinza-texto);font-size:12px;background:var(--cinza-fundo)}
+footer a{color:var(--vermelho);text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="topo-confirmado">✅ Order confirmed successfully! Check your email.</div>
+<div class="container">
+  <section class="hero">
+    <div class="icone-confirmado">🎉</div>
+    <h1>Congrats! Your order has been <span class="destaque">confirmed</span></h1>
+    <p class="hero-sub">Thanks so much for your purchase! Your materials are being prepared and will hit your inbox in just a moment.</p>
+    <div class="card-entrega">
+      <span class="entrega-icone">📧</span>
+      <h3>Check Your Email Now</h3>
+      <p>The access link to your materials was sent to the email you used at checkout. It can take up to 5 minutes to arrive.</p>
+    </div>
+    <div class="passos">
+      <div class="passo"><div class="passo-numero">1</div><div><p class="passo-titulo">Open your email</p><p class="passo-desc">Look for an email related to your order. It may come from Mivvo or our delivery email address.</p></div></div>
+      <div class="passo"><div class="passo-numero">2</div><div><p class="passo-titulo">Check your spam folder</p><p class="passo-desc">If you don't see it in your inbox, check spam or promotions. Sometimes it ends up there.</p></div></div>
+      <div class="passo"><div class="passo-numero">3</div><div><p class="passo-titulo">Grab your materials</p><p class="passo-desc">Click the link in the email, download your materials, and start posting today!</p></div></div>
+      <div class="passo"><div class="passo-numero">4</div><div><p class="passo-titulo">Questions? Get in touch</p><p class="passo-desc">If you run into any issues accessing your materials, reach out via WhatsApp or our support email.</p></div></div>
+    </div>
+    <div class="aviso-spam">
+      <p>⚠️ <strong>Didn't get the email?</strong> Check your <strong>spam</strong> or <strong>promotions</strong> folder. Still nothing? Reach out to our support team.</p>
+    </div>
+  </section>
+</div>
+<footer>
+  <p style="margin-bottom:6px;"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Privacy Policy</a> &nbsp;|&nbsp; <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Terms of Use</a></p>
+  <p>© 2026 — All rights reserved.</p>
+</footer>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','843796278012844');fbq('track','PageView');fbq('track','Purchase');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=843796278012844&ev=PageView&noscript=1"/></noscript>
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+</body>
+</html>
