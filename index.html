@@ -73,14 +73,14 @@ a{text-decoration:none;color:inherit}
 .video-host iframe{width:100%;height:100%;border:none}
 @media(max-width:640px){.phone-video-grid{grid-template-columns:1fr;gap:18px}.phone-card{width:min(240px,85vw)}.video-host iframe{pointer-events:none}.tap-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;z-index:5;cursor:pointer}}
 @media(min-width:641px){.tap-center{display:none}}
-.mapa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:32px}
-.mapa-card{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:28px 18px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
-.mapa-card:hover{border-color:var(--vermelho);box-shadow:0 4px 16px rgba(220,38,38,0.1)}
-.mapa-card .mapa-icon{width:160px;height:160px;margin:0 auto 16px}
-.mapa-card .mapa-icon img{width:100%;height:100%;object-fit:contain}
-.mapa-card .letra{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:900;color:var(--vermelho);margin-bottom:6px}
-.mapa-card h3{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--preto)}
-.mapa-card p{font-size:12px;color:var(--cinza-texto);line-height:1.5}
+.arv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.arv-card{background:var(--branco);border:1px solid var(--borda);border-radius:14px;padding:32px 22px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
+.arv-card:hover{border-color:var(--vermelho);box-shadow:0 4px 16px rgba(220,38,38,0.1)}
+.arv-card.destaque-card{border:2px solid var(--vermelho);box-shadow:0 4px 16px rgba(220,38,38,0.12)}
+.arv-card .arv-icon{font-size:44px;margin-bottom:16px;line-height:1}
+.arv-card h3{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.3px;margin-bottom:8px;color:var(--vermelho);text-transform:uppercase}
+.arv-card p{font-size:13px;color:var(--cinza-texto);line-height:1.5}
+@media(max-width:640px){.arv-grid{grid-template-columns:1fr}}
 .vantagens-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 @media(max-width:640px){.vantagens-grid{grid-template-columns:1fr}}
 .vantagens-lista{list-style:none;display:flex;flex-direction:column;gap:14px}
@@ -144,7 +144,7 @@ a{text-decoration:none;color:inherit}
 footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;color:var(--cinza-texto);font-size:13px;background:var(--cinza-fundo)}
 footer a{color:var(--vermelho);text-decoration:underline}
 .text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
-@media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 0}.mapa-card h3{font-size:15.6px}.mapa-card p{font-size:14.4px}.mapa-card .letra{font-size:24px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}}
+@media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 0}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}}
 </style>
 </head>
 <body>
@@ -211,14 +211,13 @@ footer a{color:var(--vermelho);text-decoration:underline}
 
 <section class="secao bg-cinza">
   <div class="container">
-    <h2 class="secao-titulo">Why the <span class="destaque">M.A.P.A.</span> Method Works</h2>
+    <h2 class="secao-titulo">Why Our <span class="destaque">A.R.V.</span> Method Works?</h2>
     <p class="secao-sub">You don't need to spend big to start seeing results</p>
-    <div style="background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,17px);color:var(--vermelho);">M.A.P.A. = Micro-investment + Action + Proof + instant Access</p></div>
-    <div class="mapa-grid">
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon1.webp" alt="M"></div><div class="letra">M</div><h3>Micro-investment</h3><p>Less than one shop visit — just $19.90</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="A"></div><div class="letra">A</div><h3>Immediate action</h3><p>Buy it, post it the same day</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="P"></div><div class="letra">P</div><h3>Quick proof</h3><p>Post today, feel the difference already</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon4.webp" alt="A"></div><div class="letra">A</div><h3>Instant access</h3><p>No wait, no red tape</p></div>
+    <div style="background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-size:clamp(13px,2vw,15px);color:var(--preto);line-height:1.6;">Today, talking-parts videos are among the most viral content on social media. They work because they trigger three powerful digital content triggers: <strong style="color:var(--vermelho);">Attention, Retention, and Virality</strong> — the A.R.V. Method.</p></div>
+    <div class="arv-grid">
+      <div class="arv-card"><div class="arv-icon">🧲</div><h3>Grabs Attention</h3><p>Catches the eye in the first few seconds.</p></div>
+      <div class="arv-card destaque-card"><div class="arv-icon">▶️</div><h3>Watched Start to Finish</h3><p>Keeps people watching all the way through.</p></div>
+      <div class="arv-card"><div class="arv-icon">🔁</div><h3>Drives Shares</h3><p>Gets people sharing it with others.</p></div>
     </div>
     <div class="text-center mt-32">
       <p style="color:var(--cinza-texto);font-size:15px;max-width:480px;margin:0 auto 24px;">👉 <strong style="color:var(--preto);">You pay little, test it fast, and start seeing results right away.</strong> Delivered instantly to your email and WhatsApp.</p>
