@@ -91,9 +91,17 @@ a{text-decoration:none;color:inherit}
 @media(max-width:540px){.bonus-grid{grid-template-columns:1fr;gap:16px}}
 .bonus-grid img{border-radius:10px;border:1px solid var(--borda);width:100%;transition:transform 0.2s,box-shadow 0.2s}
 .bonus-grid img:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(220,38,38,0.12)}
-.depo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
-@media(max-width:640px){.depo-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px;padding-bottom:12px;margin-bottom:32px;grid-template-columns:unset}.depo-grid img{flex:0 0 75vw;width:75vw;scroll-snap-align:center;border-radius:10px}}
-.depo-grid img{border-radius:10px;border:1px solid var(--borda);width:100%}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.depo-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.depo-grid{grid-template-columns:1fr}}
+.depo-card{background:var(--branco);border:1px solid var(--borda);border-radius:14px;padding:24px 22px;transition:border-color 0.2s,box-shadow 0.2s}
+.depo-card:hover{border-color:var(--vermelho);box-shadow:0 4px 16px rgba(220,38,38,0.1)}
+.depo-estrelas{color:#F59E0B;font-size:15px;letter-spacing:2px;margin-bottom:12px}
+.depo-texto{font-size:14px;color:var(--preto);line-height:1.6;margin-bottom:18px;min-height:96px}
+.depo-autor{display:flex;align-items:center;gap:12px}
+.depo-autor img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.depo-autor-nome{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--preto)}
+.depo-autor-cargo{font-size:12px;color:var(--cinza-texto)}
 .como-funciona-img{width:100%;max-width:572px;margin:0 auto;border-radius:12px;border:1px solid var(--borda)}
 @media(max-width:640px){.como-funciona-img{max-width:100%}}
 .alerta-promo{background:var(--vermelho-claro);border:2px solid var(--vermelho);border-radius:10px;padding:16px 24px;text-align:center;margin-bottom:36px}
@@ -262,15 +270,38 @@ footer a{color:var(--vermelho);text-decoration:underline}
 <section class="secao bg-cinza">
   <div class="container">
     <h2 class="secao-titulo">See What They're <span class="destaque">Saying</span></h2>
-    <p class="secao-sub">🔥 Shop owners who've already used the bundle</p>
+    <p class="secao-sub">🔥 Shop owners who've already used the bundle — real results, real customers</p>
     <div class="depo-grid">
-      <img src="depo_1.webp" alt="Testimonial 1" loading="lazy"><img src="depo_2.webp" alt="Testimonial 2" loading="lazy">
-      <img src="depo_3.webp" alt="Testimonial 3" loading="lazy"><img src="depo_4.webp" alt="Testimonial 4" loading="lazy">
-    </div>
-    <div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/efbdc61e-2318-4715-bcca-4e00c4b338ea" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/a90b96e8-a62b-4465-ae68-37d4217ff71d" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/9b03d38d-e921-4ab2-bb96-714bf0ddc717" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"We posted the first video on a Tuesday and by Friday we had three walk-ins asking about the timing belt special. Never had content do that before."</p>
+        <div class="depo-autor"><img src="mikethompson.webp" alt="Mike Thompson" loading="lazy"><div><div class="depo-autor-nome">Mike Thompson</div><div class="depo-autor-cargo">Owner, Thompson's Auto Repair — Dayton, OH</div></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"My Instagram was dead for two years. Two weeks after I started posting these, I picked up 11 new customers just from people tagging their friends."</p>
+        <div class="depo-autor"><img src="tonyrusso.webp" alt="Tony Russo" loading="lazy"><div><div class="depo-autor-nome">Tony Russo</div><div class="depo-autor-cargo">Owner, Russo Bros. Garage — Providence, RI</div></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"The brake pad video alone brought in six brake jobs in one month. I didn't touch a camera or edit a single clip."</p>
+        <div class="depo-autor"><img src="davecoleman.webp" alt="Dave Coleman" loading="lazy"><div><div class="depo-autor-nome">Dave Coleman</div><div class="depo-autor-cargo">Shop Manager, Coleman's Repair Center — Tulsa, OK</div></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"Customers now come in already knowing what's wrong with their car because they watched our videos. It builds trust before they even walk through the door."</p>
+        <div class="depo-autor"><img src="karenmitchell.webp" alt="Karen Mitchell" loading="lazy"><div><div class="depo-autor-nome">Karen Mitchell</div><div class="depo-autor-cargo">Owner, Mitchell Auto Works — Boise, ID</div></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"We went from maybe 200 views a post to over 40,000 in one month. Our phone hasn't stopped ringing since."</p>
+        <div class="depo-autor"><img src="amandabrooks.webp" alt="Amanda Brooks" loading="lazy"><div><div class="depo-autor-nome">Amanda Brooks</div><div class="depo-autor-cargo">Co-Owner, Brooks & Sons Automotive — Charlotte, NC</div></div></div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <p class="depo-texto">"I'm not a marketing person, I'm a mechanic. This is the first thing that's actually worked for getting new customers without spending a dime on ads."</p>
+        <div class="depo-autor"><img src="lisaturner.webp" alt="Lisa Turner" loading="lazy"><div><div class="depo-autor-nome">Lisa Turner</div><div class="depo-autor-cargo">Owner, Turner's Transmission & Auto — Reno, NV</div></div></div>
+      </div>
     </div>
   </div>
 </section>
